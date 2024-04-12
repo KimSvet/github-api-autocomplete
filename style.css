@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #C4C4C4;
+}
+.repository {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 10%;
+}
+.repository_input {
+    width: 500px;
+    height: 60px;
+    font-size: 3rem;
+}
+.repository_autocomplite {
+    width: 500px;
+    height: 180px;
+}
+.autocomplite__option {
+    font-size: 1.875rem;
+    text-align: left;
+    background-color: #E3E3E3;
+    border: 1px black solid;
+    transition: opacity 0.3s ease;
+
+}
+.repository_list {
+    margin: 20px;
+    width: 500px;
+}
+.repository_list__option {
+    display: flex;
+    background-color: #E27BEB;
+    justify-content: space-between;
+    border: 1px black solid;
+    padding: 8px 16px;
+}
+.repository_list__option p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 28.13px;
+    text-align: left;
+    margin: 0
+}
+
+.delete {
+    position: relative;
+    width: 84px; 
+    height: 38.5px;
+    border: none; 
+    background: none; 
+    padding: 0;
+    transition: opacity 0.3s ease;
+}
+.left-half,
+.right-half {
+    position: absolute;
+    width: 0;
+    height: 50px;
+    border: 2px solid #FF0000;
+    left: 50%;
+}
+
+.left-half {
+    transform: rotate(-45deg);
+
+}
+.right-half {
+    transform: rotate(45deg);
+}
+
+.delete:hover,
+.autocomplite__option:hover {
+    opacity: 0.6;
+}
