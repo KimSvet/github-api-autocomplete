@@ -1,6 +1,25 @@
-let repInput = document.querySelector('.input');
-let autocomplList = document.querySelector('.repository_autocomplite')
-let repList = document.querySelector('.repository_list');
+let repository = document.createElement('div');
+repository.classList.add('repository');
+let repositorySearch = document.createElement('div');
+repositorySearch.classList.add('repository_search');
+repository.append(repositorySearch);
+let repInput = document.createElement('input');
+repInput.classList.add('repository_input', 'input');
+repInput.type = "text";
+repInput.name = "enter";
+repInput.id = "enter";
+repositorySearch.append(repInput);
+let autocomplList = document.createElement('div')
+autocomplList.classList.add('repository_autocomplite', 'autocomplite')
+repositorySearch.append(autocomplList)
+let repList = document.createElement('div')
+repList.classList.add('repository_list')
+repository.append(repList)
+document.body.append(repository)
+
+//let repInput = document.querySelector('.input');
+//let autocomplList = document.querySelector('.repository_autocomplite')
+//let repList = document.querySelector('.repository_list');
 let timerId;
 repInput.addEventListener('input', function() {
     debounceFn(1000, fetchData);
